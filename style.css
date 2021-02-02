@@ -47,13 +47,13 @@ TABLE OF CONTENT
 
   /* COLOR PALETTE */
 
-  --ui-color-n-000: #fff;
-  --ui-color-n-050: #f5f5f5;
-  --ui-color-n-100: #ebebeb;
-  --ui-color-n-300: #aeaeae;
-  --ui-color-n-500: #353535;
-  --ui-color-n-700: #282828;
-  --ui-color-n-900: #1a1a1a;
+  --ui-color-n-000: #ffffff;
+  --ui-color-n-050: #cccccc;
+  --ui-color-n-100: #aaaaaa;
+  --ui-color-n-300: #385188;
+  --ui-color-n-500: #444444;
+  --ui-color-n-700: #ff0000;
+  --ui-color-n-900: #444444;
 
   /* BACKGROUND COLOR */
   
@@ -78,7 +78,9 @@ TABLE OF CONTENT
   |
   ------------------------------------------------------------*/
 
-  --ui-typography-typeface: "Inter", sans-serif;
+  --ui-typography-typeface: "Open Sans", sans-serif;
+  --ui-typography-typeface-title: "Noto Serif", serif;
+  --ui-typography-typeface-button: "Open Sans", sans-serif
 
   /* FONT SIZE */
 
@@ -175,11 +177,13 @@ h1,
 h2 { margin-bottom: var(--ui-typography-margin-heading); }
 
 h1 {
+  font-family: var(--ui-typography-typeface-title);
   font-size: var(--ui-typography-h1);
   line-height: var(--ui-typography-h1-leading);
 }
 
 h2 {
+  font-family: var(--ui-typography-typeface-title);
   font-size: var(--ui-typography-h2);
   line-height: var(--ui-typography-h2-leading);
 }
@@ -187,6 +191,16 @@ h2 {
 h4 {
   font-size: var(--ui-typography-h4);
   line-height: var(--ui-typography-h4-leading);
+}
+
+h5 {
+  font-size: var(--ui-typography-h4);
+  line-height: var(--ui-typography-h4-leading);
+  color: var(--ui-color-typography-button);
+}
+
+p1 {
+  color: var(--ui-color-typography-button);
 }
 
 p,
@@ -259,6 +273,7 @@ svg {
 --------------------------------------------------------------*/
 
 .ui-component-button {
+  font-family: var(--ui-typography-typeface-button);
   border: .0625rem solid var(--ui-color-brand);
   border-radius: var(--ui-radius-button);
   display: block;
@@ -328,6 +343,7 @@ div label[for=ui-component-toggle__yearly] {
 .ui-component-card {
   border: .0625rem solid var(--ui-color-border);
   border-radius: var(--ui-radius-card);
+  background-color: #444444;
   overflow: hidden;
   width: 100%;
 }
@@ -373,6 +389,19 @@ div label[for=ui-component-toggle__yearly] {
   padding-bottom: 1.25rem;
   padding-top: 1.25rem;
 }
+
+.ui-section-banner {
+  background-color:var(--ui-color-background-secondary);
+  padding: 1.25rem 1.25rem;
+  position: fixed;
+  width: 100%
+ }
+ 
+ .ui-section-banner__layout {
+  align-items:center;
+  display:flex;
+  justify-content:space-between
+ }
 
 .ui-section-header__layout { justify-content: space-between; }
 
